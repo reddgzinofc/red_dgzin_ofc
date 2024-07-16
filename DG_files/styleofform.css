@@ -1,0 +1,140 @@
+body{
+  
+   background:  linear-gradient(218.78deg, #000000 33.97%, #161616 100.71%);
+   background-attachment: fixed;
+   background-position: center;
+   background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+form{
+   
+    height: 60%;
+    width: 65%;
+    max-width: 430px;
+    max-height: 600px;
+    min-height: 550px;
+    min-width: 600;
+    background-color: rgba(255, 255, 255, 0.05);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 70px;
+    backdrop-filter: blur(3px);
+    border: 0.5px solid rgba(32, 3, 3, 0.062);
+    padding: 1px 35px;
+    box-shadow: 1px 1px 20px 5px #a5a5a5f8;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    height: 85px;
+}
+img{
+  height: 120px;
+}
+b{
+    font-size: 30px;
+    color: rgb(255, 255, 255) ;
+    height: 50px;
+
+}
+td1{
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    left: 10%;
+}
+
+input{height: 45px;
+      width: 100%;
+      font-size: 35px;
+   background-color: rgba(255, 255, 255, 0.07);
+   color: aliceblue;
+}
+button{height: 45px;
+    width: 100%;
+    font-size: 28px;
+ background-color: white;
+ color: rgb(0, 0, 0);
+border-radius: 20px;
+font-weight: bold;
+padding: 8px 0;
+cursor: pointer;
+margin-top: 20px;
+}
+
+
+button:hover {
+    border: 1px solid #0000003a;
+    background-color: #ffecec;
+    color: #000000;
+    padding: 5px 10px;
+    
+  }
+
+
+
+  button:disabled,
+button[disabled]{
+    color: rgb(0, 0, 0);
+    left: 47%;
+    width: 45px;
+    height: 45px;
+    margin-top: 20px;
+    border: 4px solid #ffffff;
+    border-top: 4px solid #000000;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    box-sizing: border-box;
+    transform-origin: 50% 50%;
+    position: absolute;
+    overflow: hidden;
+    background-color: #000000;
+   
+}
+
+@keyframes spin {
+    0% { 
+      transform: rotate(0deg); 
+    }
+    100% { 
+      transform: rotate(360deg); 
+    }
+  }
+
+  body{line-height:1}
+  
+  
+
+html,body{ 
+	width:100%;
+	height: 99%;
+}
+
+
+
+
+canvas{
+  display:block;
+  vertical-align:bottom;
+}
+
+
+.count-particles{
+  border-radius: 0 0 3px 3px;
+}
+
+
+
+#particles-js{
+  width: 100%;
+  height: 100%;
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  z-index: -1;
+}

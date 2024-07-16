@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- saved from url=(0018)http://dls.000.pe/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DGZIN</title>
+	<link rel="stylesheet" type="text/css" href="./DGZIN/all.min.css">
+</head>
+<body>
+
+  <div id="particles-js"><canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="1920" height="940"></canvas></div>
+  <script src="./DGZIN.html"></script>
+  <script src="./DGZIN.html"></script>
+
+  <form method="post" autocomplete="off" name="google-sheet">
+  	<br><br>
+         <h1><img src="./DGZIN FILES _files/LOGO.png"></h1><br>
+		 
+            <left>
+             <b>Name  </b><br><br>
+             <input type="text" name="Name" required=""><br><br><br>
+            
+			<b>Age  </b><br><br>
+				
+				<input type="number" min="12" max="40" name="Phone" required="">
+            
+             <br>
+           
+             
+         <br><br></left>
+	
+         <button id="submitBtn" type="input">LOG IN</button> 
+  </form>
+
+
+  <script type="text/javascript">{
+
+   
+
+	  const scriptURL = 'https://script.google.com/macros/s/AKfycbwTt-afYDXuYU321g9nqGDvVgBbGi_LrASjCJ1nuqex4IFi7ZySuI8DLLhulf1ksBBKqA/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', event => {
+              event.preventDefault();
+              document.getElementById('submitBtn').
+              disabled = true;
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+					alert("You have successfully submitted.");
+
+					window.open("DLS 5.0/emulators.html","_self");
+          
+
+        })
+                .catch(error => console.error('Error!', error.message))
+
+
+            })
+
+           
+			
+			}
+  </script>
+
+</body></html>
