@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DGZIN</title>
+    <title>DGZIN Login</title>
     <link rel="stylesheet" type="text/css" href="./DGZIN/all.min.css">
     <style>
         /* Efeito de borda em vermelho ao focar no campo de entrada */
@@ -13,8 +13,6 @@
             border-radius: 5px;
             outline: none;
             transition: all 0.3s ease;
-            position: relative;
-            z-index: 1;
         }
 
         input[type="text"]:focus, input[type="number"]:focus {
@@ -32,11 +30,6 @@
 </head>
 <body>
 
-<div id="particles-js">
-    <canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="1920" height="940"></canvas>
-</div>
-<script src="./DGZIN.html"></script>
-
 <form method="post" autocomplete="off" name="google-sheet">
     <h1><img src="./DGZIN FILES _files/LOGO.png" alt="Logo"></h1><br>
     <div>
@@ -44,14 +37,14 @@
         <input type="text" name="Name" required><br><br>
 
         <label><b>Age</b></label><br>
-        <input type="number" min="0" max="100000000" name="Phone" required><br><br>
+        <input type="number" min="0" max="120" name="Age" required><br><br>
     </div>
 
-    <button id="submitBtn" type="submit">LOG IN</button> 
+    <button id="submitBtn" type="submit">Log In</button> 
 </form>
 
 <script type="text/javascript">
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwTt-afYDXuYU321g9nqGDvVgBbGi_LrASjCJ1nuqex4IFi7ZySuI8DLLhulf1ksBBKqA/exec'
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwTt-afYDXuYU321g9nqGDvVgBbGi_LrASjCJ1nuqex4IFi7ZySuI8DLLhulf1ksBBKqA/exec';
     const form = document.forms['google-sheet'];
 
     form.addEventListener('submit', event => {
@@ -60,9 +53,12 @@
         fetch(scriptURL, { method: 'POST', body: new FormData(form) })
             .then(response => {
                 alert("You have successfully submitted.");
-                window.open("DLS 5.0/emulators.html", "_self");
+                window.open("emulators.html", "_self"); // Removido "DLS" do caminho
             })
-            .catch(error => console.error('Error!', error.message));
+            .catch(error => {
+                console.error('Error!', error.message);
+                document.getElementById('submitBtn').disabled = false;
+            });
     });
 </script>
 
